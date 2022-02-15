@@ -57,10 +57,22 @@ var intervalId = setInterval(function(){
 	/*setTimeout(function(){console.log("time out");},2000); */
 window.onload = function(){
 		console.log("dom loaded");
+		
 		var elDiv = document.getElementById("box");
+		
 		elDiv.onclick = function(){
-			console.log("click");	
-		}
+			var intervalId = setInterval(function(){
+				var marginTop = parseInt(elDiv.style.marginTop);
+				
+				if(marginTop < -20){
+					clearInterval(intervalId);
+					return;
+				}
+				marginTop = marginTop - 10;
+				elDiv.style.marginTop = marginTop+"px";
+				console.log(marginTop);
+			},500);
+		}	
 	}
 
 	
@@ -68,7 +80,7 @@ window.onload = function(){
 </head>
 
 <body>
-	<div id="box" class="box1">
+	<div id="box" class="box1" style="margin-top: 200px">
 		CSS에서 가장 보편적이고 많이 사용하는 margin과 padding에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 	</div>
 </body>
