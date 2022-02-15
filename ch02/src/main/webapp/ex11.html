@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ex11.html</title>
+
+<style type="text/css" media="screen">
+
+input{
+	background-color: #fff;
+	padding: 5px;
+	border: 2px solid #03cf5d;
+	outline: none;
+}
+
+input.focused
+{ 
+	background-color: #f1e6f6;
+}
+
+</style>
+<script>
+
+function onFocus(el){
+
+	//el.style.backgroundColor = "#e1e6f6";
+	el.className = "focused";
+	
+}
+
+function onBlur(el){
+	
+	//el.style.backgroundColor="#fff";
+	el.className="";
+}
+
+function changeBackground(el,className){
+	el.className = className;
+	
+}
+
+</script>
+</head>
+<body>
+	<form>
+		<input 
+			onfocus='changeBackground(this,"focused")'
+			onblur='changeBackground(this,"")'
+			type="text" 
+			placeholder="your id" />
+		<br/> <br/>
+		<input 
+			onfocus='changeBackground(this,"focused")'
+			onblur='changeBackground(this,"")'
+			type="text" 
+			placeholder="your password" />
+		
+	</form>
+</body>
+</html>
