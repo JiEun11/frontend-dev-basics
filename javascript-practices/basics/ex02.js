@@ -27,7 +27,19 @@
 
 /*
   JavaScript 객체를 구분하는 또 다른 방법 
+  1. 내장(Built-in, Native, Engine) 객체
+    Number, Boolean, Date, RegExp, ... : 생성자 함수 
+    setTimeout, parseInt, ...          : 일반 함수 
   
+    2. 호스트 객체
+    JS Engine이 임베디드 된 환경(호스트)의 객체
+    호스트 환경이 브라우저 : document라는 이름으로 js가 접근, location, XmlHttpRequest, window, ... 
+    호스트 환경이 Node.js : os, http(web server 만들고 싶을 때), fs(file 조작), path(directory 조작)...
+  
+    3. 사용자 객체 
+    JavaScript Engine이 실행되면서 생성되는 객체들... DOM 조작(document 많이 씀), AJAX(XmlHttpRequest 많이 씀)
+    
+    
 */
 console.log("===============기본타입(primitive)]===============");
 let u = undefined; // var u; 동일, 선언과 정의의 구분이 없다.
