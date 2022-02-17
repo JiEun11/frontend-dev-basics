@@ -48,11 +48,18 @@ button, input {
 }
 
 .header .logo {
-	font-size: 0;
+	position: absolute;
+	top: 50%;
+	left: -9px;
+	margin-top: -32px;
+}
+
+.header .logo .logo-naver{
+	display: inline-block;
 	width: 222px;
 	height: 52px;
-	background: #fff url("/ch03/images/nsplite.png") no-repeat 0 -158px/457px
-		434px;
+	background: #fff url("/ch03/images/nsplite.png") no-repeat 0 -158px/457px 434px;
+	vertical-align: top;
 }
 
 .header .search-box {
@@ -151,7 +158,9 @@ button, input {
 </head>
 <body>
 	<div class="header">
-		<h1 class="logo">Naver</h1>
+		<h1 class="logo">
+			<a href="#" class="logo-naver"><span class="blind">Naver</span></a>
+		</h1>
 		<div class="search-box">
 			<div class="search-area">
 				<input type="text" /> <a href="#" id="keyboard"><span
