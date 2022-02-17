@@ -29,7 +29,7 @@ button, input {
 	position: relative;
 	width: 1130px;
 	height: 100px;
-	margin: 50px auto;
+	margin: 50px 50px auto;
 	background-color: #aaa;
 }
 
@@ -41,10 +41,6 @@ button, input {
 	height: 1px;
 	margin: -1px;
 	overflow: hidden;
-}
-
-.header .logo, .header .search-box {
-	float: left;
 }
 
 .header .logo {
@@ -97,7 +93,6 @@ button, input {
 	right: 84px;
 	bottom: 0;
 	width: 36px;
-	z-index: 400;
 }
 
 .header .search-box #keyboard .ico-keyboard {
@@ -124,13 +119,16 @@ button, input {
 }
 
 .header .search-box #dropdown .ico-dropdown {
+	position: absolute;
 	display: inline-block;
 	width: 10px;
 	height: 5px;
 	background-image: url("/ch03/images/nsplite.png");
 	background-position: -408px -77px;
+	background-size: 457px 434px;
 	background-repeat: no-repeat;
 	vertical-align: top;
+	margin: -2px 0 0 -5px;
 }
 
 .header .search-box .btn-search {
