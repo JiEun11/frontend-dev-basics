@@ -56,6 +56,10 @@ console.log(url5);
  * 
  * $object = $("")
  * 
- * jQuery.ajax
- * $.ajax
+ * $.ajax({
+ *  url: url,
+ *  type: 'post',
+ *  dataType: 'formdata',
+ *  data: toQueryString(o) 
+ * })
  */
