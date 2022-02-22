@@ -17,3 +17,28 @@ var str3 = 'World';
 var str4 = str2 + ' ' + str3; // new StringBuffer(str2).append(' ').append(str3).toString();
 console.log(str4);
 
+// casting 
+var str5 = 5 + "5";
+console.log(str5);
+
+var str6 = "boolean: " + true;
+console.log(str6);
+
+// method
+var str7 = "string1 string2 string3";
+
+var index = str7.indexOf('string2');
+console.log(index);
+
+var index = str7.indexOf('string4');
+console.log(index); // 찾지 못 하면 -1
+
+var str8 = str7.substring(10,13 /* count */);
+console.log(str8);
+
+var str9 = str7.split(" ");
+console.log(str9);
+
+var str11 = "abcdef";
+var a = str11.split(":");
+console.log(a);
