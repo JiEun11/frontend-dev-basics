@@ -1,5 +1,5 @@
 /**
- * Array Method(Array.prototype)
+ * Array Method(Array.prototype.*) : Object type의 객체인데 Array instance다.
  */
 
 var colors = ['black', 'white', 'yellow'];
