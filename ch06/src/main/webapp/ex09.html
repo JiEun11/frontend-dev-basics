@@ -2,7 +2,34 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ex09.html</title>
+<script>
+window.addEventListener("load",function(){
+	var imgElement = document.createElement('img');
+	
+	// (표준(property) + 비표준(property X)) 속성(attribute)을 읽기/쓰기 위해서 setAttribute/getAttribute를 사용한다.
+	imgElement.setAttribute('src','https://file.mk.co.kr/meet/neds/2022/02/image_readtop_2022_154329_16450970584950188.jfif');
+	imgElement.setAttribute('style','width: 200px');
+	imgElement.setAttribute('alt', "연준");
+	imgElement.setAttribute('title',"연준아");
+	
+	imgElement['no'] = 10;													// property
+	//imgElement.setAttribute('name','YeonJun');		// 비표준 속성(property가 될 수 없음)
+	imgElement.setAttribute('data-name','YeonJun');	// 사용 시 'data-' prefix를 달아준다.
+	
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+		console.log(imgElement['no']/* property */, imgElement.getAttribute('no') /* attribute */);
+		//console.log(imgElement.alt, imgElement.name);
+		console.log(imgElement.alt, imgElement['data-name'], imgElement.getAttribute('data-name'));
+		
+		//var s = 'no';		//어떤 속성을 변수에 담았을 때에는?
+		//imgElement[s];	//이렇게 property에 접근해야한다.
+}, 2000);
+	
+	
+});
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

@@ -2,7 +2,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ex07.html</title>
+<script>
+window.addEventListener("load",function(){
+	var htmls = "<h3>Hello DOM</h3>";
+	
+	
+	setTimeout(function(){
+		document.body.innerHTML += htmls;
+	}, 2000);
+});
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>

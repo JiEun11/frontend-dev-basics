@@ -2,7 +2,23 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ex08.html</title>
+<script>
+window.addEventListener("load",function(){
+	var imgElement = document.createElement('img');
+	imgElement.src='https://images.chosun.com/resizer/PzvHdVZ8eLs96_ALvXzmnxWcUi4=/530x662/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosun/3ANQBTOHH5MHNTRGYBLO67V74U.jpg';
+	imgElement.style.width = "200px";
+	imgElement.alt = "연준";
+	imgElement.title = "연준아";
+	
+	
+	setTimeout(function(){
+		document.body.appendChild(imgElement);
+	}, 2000);
+	
+	
+});
+</script>
 </head>
 <body>
 	<h1 id='h' data-no='10'>DOM(Document Object Model)</h1>
