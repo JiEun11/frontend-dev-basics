@@ -2,6 +2,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- 소스버전(서비스 서버 호스팅) -->
+<!-- <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>  -->
+
+
+<!-- 압축버전(서비스 서버 호스팅) -->
+<!-- <script type="text/javascript" src="jquery/jquery-3.6.0.min.js"></script> -->
+
+<!-- 압축버전(CDN) -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script type="text/javascript">
+// 1. jQuery는 function type의 객체(함수)다.
+// 2. jQuery 함수를 호출하면 object type의 객체(jQuery 객체, 유사배열 객체)를 반환한다. (배열은 아님)
+// 3. $는 jQuery 함수 객체를 참조한다. ($: jQuery 함수 객체 이름의 Alias이다.)
+// 4. jQuery library의 정상적인 loading은 jQuery 객체의 jQuery property의 값(version정보)로 확인할 수 있다.
+
+var $obj = jQuery();	// return 값 : object type의 객체, 관례상 $를 붙인다.
+console.log(typeof(jQuery), typeof($obj), $obj.jquery);
+console.log(jQuery().jquery);	// jquery version 확인 
+
+var $obj2 = $();
+console.log(typeof($), typeof($obj2), $obj2.jquery);
+
+</script>
+
 </head>
 <body>
 	<h1>jQuery 로딩</h1>
