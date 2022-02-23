@@ -2,7 +2,46 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ex15.html</title>
+
+<script>
+/* 
+	기본 이벤트 핸들러 동작 막기
+	1. anchor: button이나 메뉴로 사용하는 경우(click event)
+	
+	2. form : validation(submit event)
+	
+*/
+window.addEventListener('load', function(){
+	var form = document.getElementById('form-login');
+	
+	form.addEventListener('submit', function(){
+		event.preventDefault();
+		
+		var inputEmail = document.getElementById('input-email');
+		if(inputEmail.value == ''){
+			alert('Email is empty');
+			inputEmail.focus();
+			return;
+		}
+		
+		var inputPassword = document.getElementById('input-password');
+		if(inputPassword.value == ''){
+			alert('Password is empty');
+			inputPassword.focus();
+			return;
+		}
+		
+		// 여기까지 왔다는 것은 validation success 이다.  
+		// submit 시키는 코드 필요 
+		console.log(this);		//handler 안에서의 this가 element다 
+		this.submit();
+		
+	});
+	
+});
+</script>
+
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
