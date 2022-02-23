@@ -14,7 +14,7 @@ window.addEventListener("load",function(){
 	imgElement.setAttribute('title',"연준아");
 	
 	imgElement['no'] = 10;													// property
-	//imgElement.setAttribute('name','YeonJun');		// 비표준 속성(property가 될 수 없음)
+	//imgElement.setAttribute('name','YeonJun');		// 비표준 속성, 얘는 property가 될 수 없음
 	imgElement.setAttribute('data-name','YeonJun');	// 사용 시 'data-' prefix를 달아준다.
 	
 	setTimeout(function(){
@@ -22,7 +22,7 @@ window.addEventListener("load",function(){
 		console.log(imgElement['no']/* property */, imgElement.getAttribute('no') /* attribute */);
 		//console.log(imgElement.alt, imgElement.name);
 		console.log(imgElement.alt, imgElement['data-name'], imgElement.getAttribute('data-name'));
-		
+		console.log(`name으로 접근 시 : ${imgElement['name']}`);		//빈 스트링값이 나온다 '' 
 		//var s = 'no';		//어떤 속성을 변수에 담았을 때에는?
 		//imgElement[s];	//이렇게 property에 접근해야한다.
 }, 2000);

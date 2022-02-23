@@ -2,7 +2,42 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>ex10.html</title>
+<script>
+window.addEventListener("load",function(){
+	// 1. ID
+	var header01 = document.getElementById("header-01");
+	var header02 = document.getElementById("header-02");
+	
+	// 2. Tag Name
+	var h4s = document.getElementsByTagName('h4');		// 배열로 나옴 
+	
+	// 3. Class Name
+	var h5s = document.getElementsByClassName('header');
+	
+	// 4. CSS 선택자 
+	var header07 = document.querySelector("#header-07");		// id라 한 개만 return 된다.
+	
+	var h6s = document.querySelectorAll(".header2");			// class는 여러 개일 수 있으니까 All
+	
+	setTimeout(function(){
+		header01.innerText += " by getElementById()";
+		header02.innerText += " by getElementById()";
+		
+		h4s[0].innerText += " by getElementsByTagName()";
+		h4s[1].innerText += " by getElementsByTagName()";
+		
+		h5s[0].innerText += " by getElementsByClassName()";
+		h5s[1].innerText += " by getElementsByClassName()";
+		
+		header07.innerText += " by querySelector()";
+		h6s[1].innerText += " by querySelectorAll()";
+		
+	}, 2000);
+	
+});
+</script>
+
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
