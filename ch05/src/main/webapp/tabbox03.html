@@ -41,30 +41,19 @@ ul, ol{ list-style-type: none;}
 }
 
 </style>
+<script type="text/javascript" src="tabbox.js"></script>
 <script type="text/javascript">
-// DOM Event Model Level0 : inline : HTML Tag에 바로 적용하기 onclick = 'JavaScript Code' 방식으로 이벤트 처리하는 방법 권장X
-let liSelected = null;	
-let onTabClicked = function(li){
-	console.log(li);
-	li.className='selected';
-	
-	if(liSelected != null && liSelected != li){
-		liSelected.className = "";
-	}
-	
-	liSelected = li;
-}
-
+	tabBox.init();
 </script>
 </head>
 <body>
 <div class="tab-box">
 		<ul>
-        <li onclick="onTabClicked(this);">메뉴 1</li>
-        <li onclick="onTabClicked(this);">메뉴 2</li>
-        <li onclick="onTabClicked(this);">메뉴 3</li>
-        <li onclick="onTabClicked(this);">메뉴 4</li>
-        <li onclick="onTabClicked(this);">메뉴 5</li>
+        <li>메뉴 1</li>
+        <li>메뉴 2</li>
+       	<li>메뉴 3</li>
+        <li>메뉴 4</li>
+        <li>메뉴 5</li>
     </ul>
     <div>
     	탭뷰입니다.
