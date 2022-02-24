@@ -8,7 +8,7 @@ var tabBox = {
 		
 		var liTabs = ul.getElementsByTagName("li");
 		for(var i = 0; i < liTabs.length; i++){
-			liTabs[i].addEventListener("click",this.onTabClicked);
+			liTabs[i].addEventListener("click",this._onTabClicked);
 		}
 	
 	},
@@ -22,6 +22,7 @@ var tabBox = {
 	},
 	
 	init: function() {
-		window.addEventListener('load', this.onWindowLoad.bind(this));
+		window.addEventListener('load', this._onWindowLoad.bind(this));
+		console.log(this);
 	}
 }

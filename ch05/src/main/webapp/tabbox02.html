@@ -60,6 +60,7 @@ var onTabClicked = function(){
 
 window.onload = function(){
 	var divTabBox = document.getElementsByClassName("tab-box")[0];
+	console.log(divTabBox);
 	console.log(divTabBox.childNodes);
 	var ul = divTabBox.childNodes[1];
 	console.log(ul);
@@ -69,6 +70,7 @@ window.onload = function(){
 	
 	for(var i = 0; i < liTabs.length; i++){
 		liTabs[i].onclick = onTabClicked;
+//		console.log(this); 여기에서 this : window
 	}
 	
 };
