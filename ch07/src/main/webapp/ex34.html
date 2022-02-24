@@ -1,24 +1,99 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>sample1</title>
-<link href='image-viewer.css' type='text/css' rel="stylesheet"/>
-<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
-<script type="text/javascript" src="image-viewer.js"></script>
-<script>
-	imageViewer.init();
-</script>
-</head>
-<body>
-	<div class="image-viewer">
-		<div class="buttons">
-			<button id="btn-change">이미지변경</button>
-			<button id="btn-slideshow">슬라이드쇼 시작</button>
-		</div>
-		<div>
-			<img/>
-		</div>
-	</div>
-</body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>sample1</title>
+    <link href="image-viewer.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="image-viewer.js"></script>
+    <script>
+      //imageViewer.init();
+      /* 
+        1. image에 click을 했을 때에도 image가 랜덤하게 바뀌게끔
+        2. 슬라이드 쇼
+          - 버튼이 '슬라이드 쇼 중지' 로 바뀌기
+          - 3초 간격으로 이미지가 랜덤하게 바뀌게 끔 
+          - 버튼을 누르면 슬라이드 쇼 중지
+          - 버튼이 '슬라이드 쇼 시작' 으로 바뀌기
+        3. imageViewer Object(image-viewer.js에)로 모듈화(캡슐화) 하기 (optional)
+      */
+      var images = [
+        {
+          name: "국화",
+          file: "Chrysanthemum.jpg",
+        },
+        {
+          name: "사막",
+          file: "Desert.jpg",
+        },
+        {
+          name: "수국",
+          file: "Hydrangeas.jpg",
+        },
+        {
+          name: "해파리",
+          file: "Jellyfish.jpg",
+        },
+        {
+          name: "코알라",
+          file: "Koala.jpg",
+        },
+        {
+          name: "등대",
+          file: "Lighthouse.jpg",
+        },
+        {
+          name: "펭귄",
+          file: "Penguins.jpg",
+        },
+        {
+          name: "툴립",
+          file: "Tulips.jpg",
+        },
+      ];
+      
+      var isPlaying = false;	//toggle variable, 처음 false 상태
+      
+      var imagePlaying = function(){
+    	  
+    	  isPlaying = !isPlaying;
+    	  $('#btn-slideshow').text(isPlaying ? "슬라이드쇼 중지" : "슬라이드쇼 시작");
+    	  var interval = setInterval(function(){
+					changeImage();	
+				},3000);
+    	  
+    	  if(isPlaying==false){
+    		  clearInterval(interval);
+    	  }
+      };
+      
+      var changeImage = function () {
+        var index = Math.floor(Math.random() * images.length);
+        $(".image-viewer img").attr({
+          alt: images[index].name,
+          src: "images/" + images[index].file,
+        });
+      };
+	
+      $(function () {
+        $("#btn-change, .image-viewer img").click(changeImage);
+				changeImage();
+        
+    		// 여기에서 this : document 
+				$("#btn-slideshow").click(imagePlaying);
+				
+      });
+    </script>
+  </head>
+  <body>
+    <div class="image-viewer">
+      <div class="buttons">
+        <button id="btn-change">이미지변경</button>
+        <button id="btn-slideshow">슬라이드쇼 시작</button>
+      </div>
+      <div>
+        <img />
+      </div>
+    </div>
+  </body>
 </html>
