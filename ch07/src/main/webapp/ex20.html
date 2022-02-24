@@ -6,12 +6,17 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		var html = "<strong>" + "가나다라" + "</strong>";			
+		// 가나다라 : 통신 한다면 서버에서 받아오는 값
+		// <strong> + 해주는거 : rendering
+		$("#p1").prepend(html);
+		
 	}, 1000);
 });
 </script>
 </head>
 <body>
-	<h1>DOM 조작 API - prepend()</h1>
+	<h1>DOM 조작 API - prepend() : DOM에 element 생성</h1>
 	
 	<p id="p1">
 		마바사아자차카타파하
