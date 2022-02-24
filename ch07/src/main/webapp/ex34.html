@@ -52,19 +52,22 @@
         },
       ];
       
+      var intervalId;
       var isPlaying = false;	//toggle variable, 처음 false 상태
-      
       var imagePlaying = function(){
-    	  
+    	    
     	  isPlaying = !isPlaying;
-    	  $('#btn-slideshow').text(isPlaying ? "슬라이드쇼 중지" : "슬라이드쇼 시작");
-    	  var interval = setInterval(function(){
-					changeImage();	
-				},3000);
+    	  console.log(isPlaying);
+    	 
+    	  //$('#btn-slideshow').text(isPlaying ? "슬라이드쇼 중지" : "슬라이드쇼 시작");
     	  
-    	  if(isPlaying==false){
-    		  clearInterval(interval);
-    	  }
+    	  if(isPlaying){
+    		  intervalId = setInterval(function(){changeImage();},3000);	  
+    		  $('#btn-slideshow').text("슬라이드쇼 중지");
+    		}else{
+    			clearInterval(intervalId);
+    			 $('#btn-slideshow').text("슬라이드쇼 시작");
+    		}
       };
       
       var changeImage = function () {
