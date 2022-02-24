@@ -26,6 +26,21 @@ li.on	{ background-color:#287FC2; color:#fff }
 <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 $(function(){
+	$("ul li").mouseover(function(){
+		// 여기에서의 this는 li
+		/* $(this).css({
+			backgroundColor: "#287FC2",
+			color: "#fff"
+		}) */
+		
+		// JavaScript 안 건드는 방법 
+		$(this).addClass("on");
+	})
+	
+		.mouseout(function(){
+			$(this).removeClass("on");
+	});
+	
 });  
 </script>
 </head>
