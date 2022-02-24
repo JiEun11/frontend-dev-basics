@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>sample1</title>
+<script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+/* jquery plug in */
+$(function() {
+	$(window).scroll(function(){
+		// 여기에서의 this = window 객체 따라서 jQuery의 API를 쓸 수 없음 
+		var $window = $(this);	// window 객체를 jQuery 객체로 mapping
+		var $document = $(document);
+		
+		var windowHeight = $window.height();
+		var documentHeight = $document.height();
+		var scrollTop = $window.scrollTop();
+		
+		if(scrollTop + windowHeight + 10 > documentHeight){
+			console.log("fetch() call");
+		}
+		
+	});
+});  
+</script>
+</head>
+<body>
+	<h1> DOM Event - scroll(timeline ui, infinite scroll) </h1>
+	<ul>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+		<li>
+			<strong>둘리</strong>
+			<p></p>
+			<strong></strong>
+			<a href="">Delete</a>
+		</li>
+	</ul>
+</body>
+</html>
