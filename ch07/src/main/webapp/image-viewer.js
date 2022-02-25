@@ -15,6 +15,7 @@ var imageViewer = {
 	},
 	
 	_changeImage: function() {
+		console.log(this);
 		var index = Math.floor(Math.random() * this._images.length);
 		$(".image-viewer img").attr({
 			alt: this._images[index].name,
