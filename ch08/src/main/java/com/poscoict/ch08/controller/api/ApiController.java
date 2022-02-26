@@ -27,6 +27,8 @@ public class ApiController {
 	@ResponseBody
 	@RequestMapping(value="/json", method=RequestMethod.GET)
 	public JsonResult json() {
+		// 객체 mapping을 Message Converter에서 못 하므로 error 나오는 상황 
+		// Jackson을 설정해서 한글이 변환되도록 해야함 
 		GuestbookVo vo = new GuestbookVo();
 		vo.setNo(1L);
 		vo.setName("Bella");
@@ -37,5 +39,6 @@ public class ApiController {
 		
 		
 		return JsonResult.success(vo);
+//		return JsonResult.fail("Exception...");
 	}
 }

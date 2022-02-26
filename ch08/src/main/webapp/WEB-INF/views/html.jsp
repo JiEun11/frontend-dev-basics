@@ -10,7 +10,7 @@
 <script>
 $(function(){
 	$('button').click(function(){
-		$("p").load("${pageContext.request.contextPath }/api/html p");
+		$("p").load("${pageContext.request.contextPath }/api/html p"); // 원하는 태그 요소만 추출 가능 
 		console.log("click");
 	});
 })

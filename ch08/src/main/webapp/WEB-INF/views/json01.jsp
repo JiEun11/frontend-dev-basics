@@ -14,7 +14,7 @@ $(function(){
 				async: true,
 				type: 'get',
 				dataType: 'json',
-				success: function(response){
+				success: function(response){ //response가 json 객체로 
 					console.log(response);
 					if(response.result !== "success"){
 						console.error(response.message);
@@ -27,6 +27,7 @@ $(function(){
 					html += ("<h3>" + response.data.message + "</h3>");
 					
 					$("#data").append(html);
+					// or $("#data").html
 				}
 			});
 	});

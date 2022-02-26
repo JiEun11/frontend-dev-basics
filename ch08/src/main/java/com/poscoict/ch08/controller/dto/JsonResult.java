@@ -20,6 +20,7 @@ public class JsonResult {
 		this.message = message;
 	}
 	
+	/* Factory method */
 	public static JsonResult success(Object data) {
 		return new JsonResult("success",data);
 	}
@@ -28,6 +29,7 @@ public class JsonResult {
 		return new JsonResult("fail",message);
 	}
 	
+	/* 밖에서 setter 설정으로 변경 못 시키도록 setter들 다 제거 */
 	public String getResult() {
 		return result;
 	}
@@ -38,6 +40,13 @@ public class JsonResult {
 	
 	public String getMessage() {
 		return message;
+	}
+
+	@Override
+	public String toString() {
+		return "JsonResult [result=" + result + ", data=" + data + ", message=" + message + "]";
 	}	
+	
+	
 	
 }
