@@ -10,7 +10,7 @@
 		- [ch04](https://github.com/JiEun11/frontend-dev-basics/tree/master/ch04)    
 
 ### JavaScript 
-* Practices
+* Practices     
 		- [ch05](https://github.com/JiEun11/frontend-dev-basics/tree/master/ch05)    
 		- [ch06](https://github.com/JiEun11/frontend-dev-basics/tree/master/ch06)
 
