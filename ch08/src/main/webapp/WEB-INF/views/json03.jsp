@@ -22,7 +22,7 @@ $(function(){
 				type: 'post', // request method
 				dataType: 'json', 	// response format (data type)
 				contentType: 'application/x-www-form-urlencoded',	// default
-				data: $param(vo),	// param을 넣으면 Data 객체로 바꿔주는? 
+				data: $.param(vo),	// param을 넣으면 Data 객체로 바꿔주는? 
 				
 				success: function(response){ //response가 json 객체로 
 					console.log(response);
