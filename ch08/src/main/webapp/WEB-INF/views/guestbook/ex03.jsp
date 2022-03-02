@@ -62,14 +62,14 @@
 						data: "password="+ password,
 						success: function(response){
 							if(response.result !== 'success'){
-								console.log(response.message);
+								console.error(response.message);
 								return;
 							}
 							
 							if(response.data == -1){
 								$(".validateTips.error").show();	
 								$("#password-delete").val("").focus();
-								return;s
+								return;
 							}
 							
 							// 삭제가 된 경우 
