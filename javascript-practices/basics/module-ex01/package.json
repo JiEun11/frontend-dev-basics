@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "module-bella-ex03": "file:../module-bella-ex03",
     "underscore": "^1.13.2"
   },
   "name": "module-ex01",
