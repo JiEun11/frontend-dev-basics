@@ -1,4 +1,4 @@
-const ex01 = function(param, callback){
+const fetch = function(param, callback){
   /* 
     비동기 코드 : 파일 시스템 접근, network 통신, SQL to DB, setTimeout
   */
@@ -12,7 +12,7 @@ const ex01 = function(param, callback){
 }
 
 // test01 : success
-ex01('param-data',function(error, result){
+fetch('param-data',function(error, result){
   // result를 주면 그걸 처리하는 코드를 여기에
   if(error){
     console.log(error);
@@ -23,7 +23,7 @@ ex01('param-data',function(error, result){
 // console.log("wait....");
 
 // test01 : fail
-ex01('...param-error...',function(error, result){
+fetch('...param-error...',function(error, result){
   // result를 주면 그걸 처리하는 코드를 여기에
   if(error){
     console.log(error);
@@ -32,3 +32,4 @@ ex01('...param-error...',function(error, result){
   }
 });
 console.log("wait....");
+
